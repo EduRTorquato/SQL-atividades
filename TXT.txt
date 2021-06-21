@@ -1,0 +1,33 @@
+CREATE DATABASE db_generation_game_online;
+USE db_generation_game_online;
+create table tb_personagens(
+	ataque INTEGER NOT NULL,
+    defesa INTEGER NOT NULL,
+    nome VARCHAR(50),
+    armas VARCHAR(20), 
+    Id INTEGER auto_increment,
+	Primary Key  (Id)
+);
+create table tb_classes(
+	
+    poderes VARCHAR(50),
+    nomeClasse VARCHAR(50),
+	nomePet VARCHAR(50),
+    idade INTEGER
+
+);
+
+INSERT INTO tb_personagens
+VALUES
+	(2600, 3000, "Carlos", "Machado", 5),
+	(3000, 1000, "Monstro", "Chacco", 6),
+	(4000, 0, "Zimba", "Shuriken", 10),
+	(2500, 2000, "Eduardo", "Espada", 9);
+
+select * from tb_personagens where nome like '%ca%';
+select * from tb_personagens where ataque > 1000 and ataque < 3000;
+
+select * from personagens p
+join classes
+on g.id = a.idclasses
+
